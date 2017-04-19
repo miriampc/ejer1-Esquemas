@@ -2,8 +2,8 @@ var objetoCaja=[{size1:'200', color1:'red', size2:'100', color2:'purple', size3:
                 {size1:'200', color1:'blue', size2:'100', color2:'green', size3:'50', color3:'black'}];
 
 window.addEventListener('load',function(){
-  console.log("ddasd");
-  var contenedor=document.getElementById('contenedor');
+  var contenedor=document.createElement('section');
+  contenedor.setAttribute("class",'contenedor');
 
   objetoCaja.forEach(function(e){
     var cajaPadre=document.createElement('div');
@@ -21,5 +21,6 @@ window.addEventListener('load',function(){
     cajaPadre.appendChild(cajaHijo);
     contenedor.appendChild(cajaPadre);
   });
+  document.body.appendChild(contenedor);
 
 });
